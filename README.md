@@ -1,4 +1,22 @@
-# DeepSeek Harness Android APK
+# deepseek harness android apk
+
+基于官网最新版制作的手机版 deepseek harness apk，支持登录官方deepseek账号，也可以用自己本地的模型，下面是实测手机上安装的阿里的MnnChat，下载的Qwen3.5-0.8b的本地模型，手机上打开dsh使用本地模型，可以跑到30 token/s.
+
+## 截图
+
+<p align="center">
+  <img src="public/Screenshot_20261029-102352.png" width="300" alt="dsh Web UI 手机端：Agent 正在写 HTML 俄罗斯方块，输出 30 tok/s" />
+</p>
+
+手机端完整的 dsh Web UI：Agent 直接写代码、跑终端；底部会话统计可见首 token 8.7 秒、输出速度 30 tok/s。
+
+<p align="center">
+  <img src="public/Screenshot_20261028-192822.png" width="300" alt="通过 MnnChat 本地模型 Qwen3.5-0.8B 对话，解码 27.49 tok/s" />
+  <br/>
+  <img src="public/Screenshot_20261028-193555.png" width="440" alt="通知栏：DeepSeek Harness 前台服务常驻运行" />
+</p>
+
+上图：手机上运行的 Qwen3.5-0.8B 本地模型（MnnChat，解码约 27 tok/s）；下图：DeepSeek Harness 以前台服务常驻通知，锁屏后继续运行。
 
 把 DeepSeek 开源的 Agent 框架 **DeepSeek Harness（dsh）v0.2.1-rc.2** 完整打包成了安卓 APK：内嵌 Node.js 26 运行时 + dsh 自包含运行时，用 WebView 承载本地 Web UI（127.0.0.1:3080）。**Agent 直接跑在手机上，可读写手机本地文件**。Android 移植包版本：**1.0.0**。
 
