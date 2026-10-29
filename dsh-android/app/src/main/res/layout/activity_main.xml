@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 头部公告行：全应用唯一的一行 chrome。
+         点“GitHub”链接跳系统浏览器；在公告文本上连点 10 次，
+         在页面下方显示运行日志（再点 10 次收起）。 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="?android:attr/colorBackground"
+        android:elevation="1dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp">
+
+        <TextView
+            android:id="@+id/announcement"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="13sp"
+            android:textColor="?android:attr/textColorPrimary"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <Button
+            android:id="@+id/perm_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/perm_button_text"
+            android:textSize="11sp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- Web 内容填满剩余空间 -->
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- 运行日志：默认隐藏，公告连点 10 次后显示在页面下方 -->
+    <LinearLayout
+        android:id="@+id/log_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="2dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/log_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/log_label"
+            android:textSize="12sp"
+            android:textColor="?android:attr/textColorPrimary" />
+
+        <Button
+            android:id="@+id/log_copy_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/log_copy"
+            android:textSize="11sp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/log_panel"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#11000000"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/log_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:fontFamily="monospace"
+            android:textIsSelectable="true"
+            android:padding="6dp" />
+    </ScrollView>
+
+</LinearLayout>

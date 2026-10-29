@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.DeepSeekHarness" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#4D6BFE</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+    </style>
+</resources>
