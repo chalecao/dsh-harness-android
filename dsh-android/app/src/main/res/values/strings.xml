@@ -11,7 +11,7 @@
     <string name="announcement_text">点个 Star 支持</string>
     <string name="announcement_link">GitHub</string>
     <string name="announcement_full">点个 Star 支持 · GitHub</string>
-    <string name="github_url">https://github.com/deepseek-ai/deepseek-harness</string>
+    <string name="github_url">https://github.com/chalecao/dsh-harness-android.git</string>
     <string name="announce_tap_hint">再点 %1$d 次显示运行日志</string>
     <string name="announce_log_shown">运行日志已显示（再点 10 次收起）</string>
     <string name="announce_log_hidden">运行日志已收起</string>
